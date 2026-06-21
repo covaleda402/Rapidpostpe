@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes-Pedidos</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Clientes-Pedidos</h1>
+        <p id="contadorPedidos">Pedidos Totales: 0</p> <p id="contadorPostres">Postres a hacer: 0</p>
+    </header>
+
+
+    <section class="clientes">
+        <form id="formPedido">
+            <h2>Registrar pedido</h2>
+            <label for="nombre" class="name" >Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="telefono" class="telefono" >Teléfono:</label>
+            <input type="number" id="telefono" name="telefono" required>
+            <br>
+            <label for="jornada">Jornada:</label>
+            <select id="jornada" name="jornada" required>
+                <option value="mañana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="nocturna">Nocturna</option>
+            </select>
+            <br>
+            <label for="sabor">Sabor:</label>
+            <select name="sabor" id="sabor">
+                <option value="Oreo">Oreo</option>
+                <option value="Maracuya">Maracuya</option>
+                <option value="Arequipe">Arequipe</option>
+            </select>
+            <br>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+            <br>
+            <label for="fecha">Fecha de entrega:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <br>
+            <label for="tipocliente">Tipo de cliente:</label>
+            <select id="tipocliente" name="tipocliente" required>
+                <option value="conocidos">Conocido</option>
+                <option value="empleado">Empleado</option>
+            </select>
+            <br>
+            <label for="valorPagado">Valor Pagado:</label>
+            <input type="number" id="valorPagado" name="valorPagado" min="0" step="0.01">
+            <br>
+            <button type="submit">Agregar Pedido del Cliente</button> 
+        </form>
+        <table id="tablaPedidos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Jornada</th>
+                    <th>Sabor</th>
+                    <th>Cantidad</th>
+                    <th>Fecha de entrega</th>
+                    <th>Estado</th>
+                    <th>Tipo de cliente</th>
+                    <th>Total</th>
+                    <th>Pagado</th>
+                    <th>Adeudado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+
+        </table>
+    </section>
+</body> <button type="button" id="exportar">Exportar a CSV</button>
+<script src="./js/repe.js"></script>
+</html>
