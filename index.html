@@ -8,9 +8,18 @@
 </head>
 <body>
     <header>
-        <h1>Clientes-Pedidos</h1>
-        <p id="contadorPedidos">Pedidos Totales: 0</p> <p id="contadorPostres">Postres a hacer: 0</p>
-    </header>
+    <h1>Clientes-Pedidos</h1>
+
+    <p id="contadorPedidos">Pedidos Totales: 0</p>
+
+    <p id="contadorPostres">Postres a hacer: 0</p>
+
+    <p id="contadorOreo">Oreo: 0</p>
+
+    <p id="contadorMaracuya">Maracuya: 0</p>
+
+    <p id="contadorArequipe">Arequipe: 0</p>
+</header>
 
 
     <section class="clientes">
@@ -53,6 +62,7 @@
             <br>
             <button type="submit">Agregar Pedido del Cliente</button> 
         </form>
+        <div class="tabla-container">
         <table id="tablaPedidos">
             <thead>
                 <tr>
@@ -74,7 +84,9 @@
             </tbody>
 
         </table>
+        </div>
     </section>
-</body> <button type="button" id="exportar">Exportar a CSV</button>
+    <button type="button" id="exportar">Exportar a CSV</button>
+</body>
 <script src="./js/repe.js"></script>
 </html>

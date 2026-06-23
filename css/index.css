@@ -126,3 +126,19 @@ button:hover{
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+@media (max-width: 768px){
+
+    body{
+        padding: 10px;
+    }
+
+    form{
+        width: 100%;
+    }
+
+}
+.tabla-container{
+    width: 100%;
+    overflow-x: auto;
+}

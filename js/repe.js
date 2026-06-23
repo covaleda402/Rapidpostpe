@@ -21,13 +21,35 @@ function actualizarContador(){
 
 function actualizarPostres() {
     let totalPostres = 0;
+    let totalOreo = 0;
+    let totalMaracuya = 0;
+    let totalArequipe = 0;
 
     pedidosGuardados.forEach(pedido => {
         totalPostres += parseInt(pedido.cantidad);
+        if(pedido.sabor === "Oreo"){
+            totalOreo += parseInt(pedido.cantidad);
+        }else if (pedido.sabor === "Maracuya"){
+            totalMaracuya += parseInt(pedido.cantidad);
+        } else if(pedido.sabor === "Arequipe") {
+            totalArequipe += parseInt(pedido.cantidad);
+        };
     });
-
     const contadorPostres = document.getElementById("contadorPostres");
     contadorPostres.textContent = "Postres por hacer: " + totalPostres;
+
+    const contadorOreo = document.getElementById("contadorOreo");
+    contadorOreo.textContent = "Oreo: " + totalOreo;
+
+    const contadorMaracuya = document.getElementById("contadorMaracuya");
+    contadorMaracuya.textContent = "Maracuya: " + totalMaracuya;
+
+    const contadorArequipe = document.getElementById("contadorArequipe");
+    contadorArequipe.textContent = "Arequipe: " + totalArequipe;
+
+
+
+
 }
 
 actualizarPostres();
